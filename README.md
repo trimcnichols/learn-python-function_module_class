@@ -13,6 +13,146 @@ Click the snake to see the code and explanation about my code
 
 *******************************************
 -->
+
+<details><summary>:snake: Using OS </summary>
+<p>
+
+```python
+import os
+print(os.getpid())
+```
+</p>
+</details>
+
+<details><summary>:snake: Lambda function</summary>
+<p>
+
+```python
+numbers = [4,2,6,8,1,5]
+words = ['dog','cat','fish','llama','hedgehog']
+print(numbers)
+numbers.sort()
+print(numbers)
+numbers.sort(reverse=True)
+print(numbers)
+print(words)
+words.sort()
+print(words)
+words.sort(reverse=True)
+print(words)
+
+# lambda is anomous function
+# it can take any number
+# but lambda function can do is to return value
+# return arg1 + arg 2
+# general syntax :
+#
+# def add_numbers(arg1, arg2):
+#  #   return arg1+arg2
+
+def get_index_zero(some_list):
+    return some_list[0]
+lambda some_list: some_list[0]
+
+stuff=[
+    ['Gamma',5],
+    ['Alpha',7],
+    ['Beta',3]
+
+]
+print(stuff)
+#key argument need a key function
+stuff.sort(key=lambda some_list: some_list[0])
+print(stuff)
+
+stuff.sort(key=lambda some_list: some_list[1])
+print(stuff)
+
+
+```
+</p>
+</details>
+
+
+
+<details><summary>:snake: Recursion </summary>
+<p>
+
+```python
+def add_one(x):
+    print(x)
+    if x == 3:
+            return
+    add_one(x+1)
+add_one(0)
+
+def factorial(x):
+    if x > 1:
+        return x * factorial(x-1)
+    else:
+        return 1
+answer = factorial(4)
+print(answer)
+
+```
+</p>
+</details>
+
+<details><summary>:snake: Try-except</summary>
+<p>
+
+```python
+'''
+S="Hello"
+num = int(S)
+print(num)
+S= "Hello"
+try:
+	num = int(S)
+	print(num)
+	print("Do something important")
+except:
+	print("Something went wrong")
+
+try:
+	S= "Hello"
+
+	try:
+		print(foobar)
+		num = int(S)
+		print(num)
+	except ValueError:
+		print("Unable to convert to int")
+	except NameError:
+		print("I failed")
+	except:
+		print("Something else went wrong")
+except:
+	print("Got a error in my try")
+while True:
+	try:
+		num = input("Enter a number: ")
+		num = int(num)
+		break
+	except:
+		print("Try Again")
+
+import common
+num = common.get_integer()
+num +=5
+print(f"Nem number is {num}")
+'''
+
+user_input = int(input('Enter a number: '))
+if user_input ==2:
+    raise ValueError("you cannot use value 2")
+print("got here happyly!")
+
+```
+</p>
+</details>
+
+
 <details><summary>:snake: Employee access database</summary>
 <p>
 
